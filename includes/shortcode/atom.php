@@ -8,8 +8,11 @@ class Atom {
 
     static function callback($atts, $content) {
         extract( shortcode_atts( array(
-            "id" => ''
+            "id" => '',
+            'uuid' => ''
         ), $atts ));
+
+        //TODO: Lookup by UUID postmeta via WP_Query
 
         return 'Atom: ' . $id;
     }
