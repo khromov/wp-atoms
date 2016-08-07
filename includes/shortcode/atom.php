@@ -7,6 +7,10 @@ class Atom {
     }
 
     static function callback($atts, $content) {
-        return 'foobar';
+        extract( shortcode_atts( array(
+            "id" => ''
+        ), $atts ));
+
+        return 'Atom: ' . $id;
     }
 }

@@ -14,10 +14,14 @@ namespace Khromov\Atoms;
 use Khromov\Atom\Shortcode\Atom as Atom_Shortcode;
 
 include 'includes/cpt/atom.php';
+include 'includes/taxonomy/atom-category.php';
 include 'includes/shortcode/atom.php';
 include 'includes/integration/shortcake.php';
 
 add_action('init', function() {
-    
     Atom_Shortcode::init();
+});
+
+add_action('register_shortcode_ui', function() {
+    Shortcake::init();
 });
