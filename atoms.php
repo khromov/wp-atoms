@@ -8,3 +8,16 @@ Author: khromov
 Author URI: http://khromov.se
 License: GPL2
 */
+
+namespace Khromov\Atoms;
+
+use Khromov\Atom\Shortcode\Atom as Atom_Shortcode;
+
+include 'includes/cpt/atom.php';
+include 'includes/shortcode/atom.php';
+include 'includes/integration/shortcake.php';
+
+add_action('init', function() {
+    
+    Atom_Shortcode::init();
+});
